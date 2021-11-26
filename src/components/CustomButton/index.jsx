@@ -1,8 +1,9 @@
 import React from 'react';
+import { Linking } from 'react-native';
 import styled from 'styled-components/native';
 
 export const ButtonPrimary = styled.TouchableHighlight`
-    width: 60%;
+    width: 70%;
     align-items: center;
     line-height: 100px;
     border-radius: ${props => props.theme.radius.size.none.value};
@@ -12,20 +13,20 @@ export const ButtonPrimary = styled.TouchableHighlight`
 `;
 
 export const ButtonText = styled.Text`
+    font-family: ${props => props.theme.font.family.highlight.value};
+    font-weight: ${props => props.theme.font.weight.bold.value};
     font-size: ${props => props.theme.font.size.sm.value};
     color: ${props => props.theme.neutral.color[1].value};
 `;
 
-function click() {
-    console.log("click")
+function click(url) {
+    Linking.openURL(url)
 }
-
-
 
 function CustomButton(props){
     return(
-        <ButtonPrimary activeOpacity={0.6}  onPress={click} underlayColor="#8F260A">
-            <ButtonText>Saber Mais</ButtonText>
+        <ButtonPrimary activeOpacity={0.6}  onPress={()=>click(props.link)} underlayColor="#8F260A">
+            <ButtonText>{props.text}</ButtonText>
         </ButtonPrimary>
     )
 };

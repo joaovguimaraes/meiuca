@@ -15,18 +15,15 @@ const CardSubtitle = styled(SubtitleSm)`
 const CardParagraph = styled(Paragraph)`
     margin-bottom: ${props => props.theme.spacing.size.sm.value};
 `
-function CardContent(){
+
+function CardContent(props){
     return(
             <View>    
                 <Shape>
-                    <CardHeader>Heading</CardHeader>
-                    <CardSubtitle>Subtitle</CardSubtitle>
-                    <CardParagraph>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer when an unknown printer took a galley of type and scrambled. 
-                    </CardParagraph>
-                    <CustomButton/>
+                    <CardHeader>{props.heading}</CardHeader>
+                    <CardSubtitle>{props.subtitle}</CardSubtitle>
+                    <CardParagraph>{props.paragraph}</CardParagraph>
+                    <CustomButton text="Saber Mais" link={props.link}/>
                 </Shape>
             </View>
     );
