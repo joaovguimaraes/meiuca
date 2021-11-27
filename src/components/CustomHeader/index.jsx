@@ -13,7 +13,7 @@ export const AppHeader = styled.View`
 
 //estilo do texto do header
 export const HeaderText = styled.Text`
-    margin-top: ${Platform.OS === 'android' ? 40 : 20}px;
+    margin-top: 20px;
     font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.bold.value};
     font-size: ${props => props.theme.font.size.lg.value};
