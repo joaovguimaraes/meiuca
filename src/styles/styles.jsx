@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 
+//COMPONENT SHAPE
 export const Shape = styled.View`
     margin: 1%;
     background-color: ${props => props.theme.neutral.color[1].value};
@@ -9,7 +10,7 @@ export const Shape = styled.View`
     border-color: ${props => props.theme.neutral.color[2].value};
 `;
 
-//Baixar font
+//COMPONENT HEADINGSM 
 export const HeadingSm = styled.Text`
     line-height: 35px;
     font-size: ${props => props.theme.font.size.lg.value};
@@ -18,6 +19,7 @@ export const HeadingSm = styled.Text`
     color: ${props => props.theme.neutral.color[5].value};
 `;
 
+//COMPONENT SUBTITLESM
 export const SubtitleSm = styled.Text`
     line-height: 25px;
     font-size: ${props => props.theme.font.size.md.value};
@@ -26,6 +28,7 @@ export const SubtitleSm = styled.Text`
     color: ${props => props.theme.neutral.color[4].value};
 `;
 
+//COMPONENT PARAGRAPH
 export const Paragraph = styled.Text`
     line-height: 25px;
     font-size: ${props => props.theme.font.size.xs.value};
@@ -34,6 +37,7 @@ export const Paragraph = styled.Text`
     color: ${props => props.theme.neutral.color[4].value};
 `;
 
+//FLATLIST COMPONENT
 export const CustomFlatList = styled.FlatList`
     margin-bottom: 75px;
 `;

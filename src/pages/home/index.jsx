@@ -6,6 +6,8 @@ import { CustomFlatList } from '../../styles/styles'
 
 function Home(){
     const [articles, setArticles] = useState([]);
+    
+    //Resquest da API
     useEffect(()=>{
         fetch("https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=b93c26769490437aa2e5b671a66abadc")
         .then((response) => response.json())
@@ -17,6 +19,7 @@ function Home(){
         })
     }, [])
 
+    //HOME COMPONENT
     return(
         <View>
                 <CustomHeader />
