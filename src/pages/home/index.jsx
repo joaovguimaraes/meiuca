@@ -1,7 +1,9 @@
 import React,{ useState, useEffect} from 'react';
-import { FlatList, ActivityIndicator } from 'react-native';
+import { ActivityIndicator } from 'react-native';
+import { SafeAreaView, } from 'react-native';
 import CardContent from '../../components/CardContent';
 import CustomHeader from '../../components/CustomHeader';
+import { CustomFlatList } from '../../styles/styles'
 
 function Home(){
     const [articles, setArticles] = useState([]);
@@ -17,20 +19,19 @@ function Home(){
     }, [])
 
     return(
-        <>
-            <CustomHeader />
-            {articles === null ? 
-            <ActivityIndicator size="medium"/> :
-            <FlatList
-                data={articles}
-                renderItem={({item,index}) =>(
-                    <CardContent heading={item.source.name} subtitle={item.title} paragraph={item.description} link={item.url}/>
-                )}
-                keyExtractor={(item, index) => index.toString()}
-            /> 
-            }
-            
-        </>
+        <SafeAreaView forceInset={{ bottom: 'never' }}>
+                <CustomHeader />
+                {articles === null ? 
+                <ActivityIndicator size='large'/> :
+                <CustomFlatList
+                    data={articles}
+                    renderItem={({item,index}) =>(
+                        <CardContent heading={item.source.name} subtitle={item.title} paragraph={item.description} link={item.url}/>
+                    )}
+                    keyExtractor={(item, index) => index.toString()}
+                /> 
+                }
+        </SafeAreaView>
     );
 }
 

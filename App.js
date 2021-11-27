@@ -7,13 +7,15 @@ import { useFonts } from 'expo-font';
 import theme from "./theme";
 
 export default function App() {
-  useFonts({
-    'Archivo': require('./assets/fonts/Archivo.ttf'),
+  const [loaded] = useFonts({
+    Archivo: require('./assets/fonts/Archivo.ttf'),
   });
-
-    return (
-      <ThemeProvider theme={theme}>
-        <Home/>
-      </ThemeProvider>
-    );
+  if (!loaded) {
+    return null;
+  }
+  return (
+    <ThemeProvider theme={theme}>
+      <Home/>
+    </ThemeProvider>
+  );
 }

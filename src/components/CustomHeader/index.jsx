@@ -7,10 +7,11 @@ export const AppHeader = styled.View`
     height: 10%;
     justify-content: center;
     align-items: center;
+    align-content: center;
 `;
 
 export const HeaderText = styled.Text`
-    margin-top: 10;
+    margin-top: 20px;
     font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.bold.value};
     font-size: ${props => props.theme.font.size.lg.value};
