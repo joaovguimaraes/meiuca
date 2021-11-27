@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { StatusBar } from 'react-native';
 
 export const Shape = styled.View`
     margin: 1%;
