@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
-
+import { StatusBar } from 'react-native';
 
 export const Shape = styled.View`
-    width: 90%;
-    margin: 5%;
+    margin: 1%;
     background-color: ${props => props.theme.neutral.color[1].value};
     border-radius: ${props => props.theme.radius.size.none.value};
     padding: ${props => props.theme.spacing.size.lg.value};
@@ -15,7 +14,7 @@ export const Shape = styled.View`
 export const HeadingSm = styled.Text`
     line-height: 35px;
     font-size: ${props => props.theme.font.size.lg.value};
-    font-family: 'Archivo';
+    font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.bold.value};
     color: ${props => props.theme.neutral.color[5].value};
 `;
@@ -23,7 +22,7 @@ export const HeadingSm = styled.Text`
 export const SubtitleSm = styled.Text`
     line-height: 25px;
     font-size: ${props => props.theme.font.size.md.value};
-    font-family: 'Archivo';
+    font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.medium.value};
     color: ${props => props.theme.neutral.color[4].value};
 `;
@@ -31,9 +30,13 @@ export const SubtitleSm = styled.Text`
 export const Paragraph = styled.Text`
     line-height: 25px;
     font-size: ${props => props.theme.font.size.xs.value};
-    font-family:'Archivo';
+    font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.regular.value};
     color: ${props => props.theme.neutral.color[4].value};
+`;
+
+export const CustomFlatList = styled.FlatList`
+    margin-bottom: 75px;
 `;
 
 
