@@ -1,6 +1,5 @@
 import React,{ useState, useEffect} from 'react';
 import { ActivityIndicator, View } from 'react-native';
-import { SafeAreaView, } from 'react-native';
 import CardContent from '../../components/CardContent';
 import CustomHeader from '../../components/CustomHeader';
 import { CustomFlatList } from '../../styles/styles'
