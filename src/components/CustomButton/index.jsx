@@ -2,6 +2,7 @@ import React from 'react';
 import { Linking } from 'react-native';
 import styled from 'styled-components/native';
 
+//estilo do CustomButton 
 export const ButtonPrimary = styled.TouchableHighlight`
     width: 70%;
     align-items: center;
@@ -12,6 +13,7 @@ export const ButtonPrimary = styled.TouchableHighlight`
     background: ${props => props.theme.brand.color.primary[3].value};
 `;
 
+//estilo do texto no CustomButton  
 export const ButtonText = styled.Text`
     font-family: ${props => props.theme.font.family.highlight.value};
     font-weight: ${props => props.theme.font.weight.bold.value};
@@ -19,10 +21,12 @@ export const ButtonText = styled.Text`
     color: ${props => props.theme.neutral.color[1].value};
 `;
 
+//Função que abre link URL
 function click(url) {
     Linking.openURL(url)
 }
 
+//COMPONENT CUSTOMBUTTON
 function CustomButton(props){
     return(
         <ButtonPrimary activeOpacity={0.6}  onPress={()=>click(props.link)} underlayColor="#8F260A">
